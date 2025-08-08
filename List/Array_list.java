@@ -11,7 +11,7 @@ public class Array_list {
         list.add(22);
         list.add(33);
         System.out.println(list);
-        List <Integer> list1 = List.of(1,33,44);// can change in this means can not add // change//or modifide if Using --> List.of 
+        List <Integer> list1 = List.of(1,33,44);// You can'nt change in this means can not add // change//or modifide if Using --> List.of 
         list.addAll(list1);// Use to add the list elements in a list // 
         list.sort(null);
         System.out.println(list);
