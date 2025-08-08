@@ -8,7 +8,11 @@ public class Array_list1 {
         list.set(2, 67);
         Integer [] arr = {22,3,4,53,78};
         List<Integer> list2 = Arrays.asList(arr);
+        list2.set(2, 666); // if you make changes in list by using set it will also change in array//
         System.out.println(list2);
+        for(int i :arr){
+            System.out.print(i+" ");
+        }
 
     }
 }
