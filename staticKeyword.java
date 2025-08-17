@@ -2,11 +2,11 @@ class Student {
     String name;
     int age;
     int rollNo;
-    static int studentno = 0; // initialize static counter
+    private static int studentno = 0; // initialize static counter
 
-    public Student(String name, int age, int rollNo) {
+    Student(String name, int age, int rollNo) {
         this.name = name;
-        this.age = age;
+        this.age = age; 
         this.rollNo = rollNo;
         studentno++; // increment when a new student is created
     }
@@ -14,6 +14,8 @@ class Student {
 
 public class staticKeyword {
     public static void main(String[] args) {
+        Student.studentno =100;// using private access modifire so that the memebers out side the class can not access it 
+        System.out.println(Student.studentno);
         Student s1 = new Student("Sidd", 22, 10);
         System.out.println("Total students: " + Student.studentno); 
 
