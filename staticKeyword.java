@@ -10,8 +10,8 @@ class Student {
         this.rollNo = rollNo;
         studentno++; // increment when a new student is created
     }
-    public void getter(){
-        System.out.println(studentno);
+    public static int getter(){
+        return studentno;
     }
 }
 
@@ -24,6 +24,7 @@ public class staticKeyword {
         
         Student s2 = new Student("Suman", 33, 4);
        // System.out.println("Total students: " + Student.studentno); 
-        s2.getter();
+        System.out.println(s2.getter());
+        System.out.println(Student.getter());
     }
 }
