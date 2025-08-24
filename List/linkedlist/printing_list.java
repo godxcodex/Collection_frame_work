@@ -19,8 +19,8 @@ public class printing_list {
         b.next = c;
         c.next = d;
         d.next = e;
-        Node temp = a;
-        while(temp != null){
+        Node temp = a; // printing the linkedlist
+        while(temp != null){ 
            System.out.print(temp.data +" ");
            temp = temp.next;
         }
