@@ -25,7 +25,10 @@ public static class linkedlist{
     void addAtIndex(int idx,int val){
         Node ne = new Node(val);
         Node temp = head;
-        
+        if(idx == size()){
+            tail.next = ne;
+            return;
+        }
         for(int i=1;i<=idx-1;i++){
             temp = temp.next;
         }
@@ -35,7 +38,7 @@ public static class linkedlist{
     void display(){
         Node temp = head;
         while(temp != null){
-            System.out.println(temp.data);
+            System.out.println(temp.data +" ");
             temp = temp.next;
         }
     }
@@ -56,9 +59,9 @@ public static class linkedlist{
         list.add(54);
         list.add(78);
        // list.display();
-        list.addAtIndex(2, 93);
+        list.addAtIndex(4, 93);
         list.display();
-
+        
     }
     
 }
