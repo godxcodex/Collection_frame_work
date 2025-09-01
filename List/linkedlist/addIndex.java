@@ -27,6 +27,7 @@ public static class linkedlist{
         Node temp = head;
         if(idx == size()){
             tail.next = ne;
+            tail = ne;
             return;
         }
         for(int i=1;i<=idx-1;i++){
@@ -61,6 +62,7 @@ public static class linkedlist{
        // list.display();
         list.addAtIndex(4, 93);
         list.display();
+        System.out.println(list.tail.data);
         
     }
     
