@@ -30,6 +30,11 @@ public static class linkedlist{
             tail = ne;
             return;
         }
+        if(idx ==0){
+            ne.next = head;
+            head = ne; 
+            return; 
+        }
         for(int i=1;i<=idx-1;i++){
             temp = temp.next;
         }
@@ -61,8 +66,12 @@ public static class linkedlist{
         list.add(78);
        // list.display();
         list.addAtIndex(4, 93);
+       // list.display();
+        //System.out.println(list.tail.data);
+        list.addAtIndex(0, 39);
         list.display();
-        System.out.println(list.tail.data);
+        System.out.println();
+        System.out.println(list.head.data);
         
     }
     
