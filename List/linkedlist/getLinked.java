@@ -27,6 +27,18 @@ public class getLinked {
       void addAt (int idx,int val){
         Node temp = new Node(val);
         Node ne = head;
+         if(idx == size){
+            tail.next = ne;
+            tail = ne;
+            size++;
+            return;
+        }
+        if(idx ==0){
+            ne.next = head;
+            head = ne;
+            size++; 
+            return; 
+        }
         for(int i=1;i<=idx;i++){
             ne = ne.next; 
         }
@@ -34,6 +46,13 @@ public class getLinked {
         ne.next = temp;
         size++;
       }  
+      void display(){
+        Node temp = head;
+        while(temp!=null){
+            System.out.print(temp.data +" ");
+            temp = temp.next;
+        }
+      }
     }
     public static void main(String[] args) {
         
